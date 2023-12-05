@@ -6,8 +6,8 @@ jobs:
   deploy-mainnet:
     uses: FroVolod/bos-cli-rs/.github/workflows/deploy-mainnet.yml@master
     with:
-      deploy-account-address: bos.proofofvibes.near
-      signer-account-address: bos.proofofvibes.near
-      signer-public-key: ed25519:DucJdnMcR4qoWv5xZSgwfcXeC8x3ZdBCyhRMsmAigU8K
+      deploy-account-address:  ${{ inputs.deploy-account-address }}
+      signer-account-address: ${{ inputs.signer-account-address }}
+      signer-public-key: ${{ inputs.signer-public-key }}
     secrets:
-      SIGNER_PRIVATE_KEY: ed25519:4u2CfbYLNHpi2DtsvE954miPpuX1oTTXkCNTu628nnRPiW5E9UijcJoKRPBPUhrnwEtPdQuhvFKm7vhmFzqzzrmh
+      SIGNER_PRIVATE_KEY:  ${{ secrets.SIGNER_PRIVATE_KEY }}
